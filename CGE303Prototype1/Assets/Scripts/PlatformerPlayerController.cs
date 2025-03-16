@@ -10,6 +10,11 @@ public class PlatformerPlayerController : MonoBehaviour
     public Transform groundCheck;
     public float groundCheckRadius = 0.2f;
 
+    public AudioClip jumpSound;
+    public AudioClip coinSound;
+
+    private AudioSource playerAudio;
+
     private Rigidbody2D rb;
     private bool isGrounded;
     private float horizontalInput;
@@ -17,6 +22,9 @@ public class PlatformerPlayerController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        playerAudio = GetComponent<AudioSource>();
+
+
         rb = GetComponent<Rigidbody2D>();
 
         if (groundCheck == null)
@@ -34,6 +42,7 @@ public class PlatformerPlayerController : MonoBehaviour
         if (Input.GetButtonDown("Jump") && isGrounded)
         {
             rb.velocity = new Vector2(rb.velocity.x, jumpForce);
+            playerAudio.PlayOneShot(jumpSound, 1.0f);
         }
 
 
@@ -55,5 +64,13 @@ public class PlatformerPlayerController : MonoBehaviour
         }
 
     }
+
+    public void PlayCoinSound()
+    {
+
+        playerAudio.PlayOneShot(coinSound, 1.0f);
+
+    }
+
 
 }

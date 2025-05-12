@@ -363,7 +363,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: -2413806693520163455, guid: ebe73ca9363db456bacf42c025bb4847, type: 3}
-  m_Color: {r: 0.7372549, g: 0.7960785, b: 0.8352942, a: 1}
+  m_Color: {r: 0.40882874, g: 0.6028091, b: 0.9339623, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -1292,7 +1292,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 60562a57cce3c7048860900c125cfe8e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 1000
+  health: 100
   deathEffect: {fileID: 166197276445936327, guid: 9692e7e324f827d40881a8ffdfeecf31, type: 3}
   damage: 10
 --- !u!95 &831879946
